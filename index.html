@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquinas de Confección R&K</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="img/LogoR&K2.0.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="img/LogoR&K2.0.png" alt="R&K"></div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#maquinas">Máquinas</a></li>
+                <li><a href="#servicios">Servicios Técnicos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <div class="inicio-content">
+                <h2>Bienvenido a R&K</h2>
+                <p>Somos una empresa líder en El Carmen de Viboral, dedicada a ofrecer soluciones innovadoras y de alta calidad para satisfacer las necesidades de nuestros clientes. Con años de experiencia en el mercado, nos esforzamos por superar las expectativas a través de nuestros productos y servicios excepcionales. Nuestra misión es ofrecer maquinas de calidad, y trabajamos cada día para alcanzar nuestra visión.</p>
+                <p>En R&K, valoramos la excelencia, la integridad y la colaboración. Creemos en la construcción de relaciones duraderas con nuestros clientes y socios, basadas en la confianza y el respeto mutuo. Explora nuestro sitio web para conocer más sobre lo que podemos ofrecerte.</p>
+            </div>
+        </section>
+
+        <section id="maquinas" class="maquinas">
+            <h2 class="maquinah2">Nuestras Máquinas</h2>
+            <div class="maquinas-grid"></div>
+        </section>
+
+        <div class="machine-modal" style="display: none;">
+            <div class="machine-modal-content">
+                <span class="close-button">×</span>
+                <img src="" class="modal-image">
+                <div class="modal-details">
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-price"></p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ryk_800/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="social-icon whatsapp whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="servicios" class="servicios-info">
+            <h2>Servicios Técnicos</h2>
+            <div class="tecnicos-cards-container"></div>
+        </section>
+
+        <section id="contacto" class="contact-info">
+            <h2>Contáctanos</h2>
+            <div class="contact-layout">
+                <div class="contact-form">
+                    <input type="text" id="wa-name" placeholder="Nombre Completo" required>
+                    <input type="tel" id="wa-phone" placeholder="Teléfono" required>
+                    <textarea id="wa-msg" placeholder="Mensaje" required></textarea>
+                    <button type="button" class="submit-btn" onclick="enviarContactoWA()">ENVIAR</button>
+                </div>
+                <div class="map-and-icons">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d-75.3370!3d6.0891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMDUnMjAuOCJOIDc1wrAyMCcxMy4yIlc!5e0!3m2!1ses!2sco!4v1645100000000!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="social-icons-list">
+                        <a href="https://www.instagram.com/ryk_800/" target="_blank" class="social-icon instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                        <a href="https://wa.me/573226526403" target="_blank" class="social-icon whatsapp"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/search/top?q=ryk_800" target="_blank" class="social-icon facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="admin-section" class="admin-section" style="display: none; background: #1a1a1a; padding: 40px; color: white;">
+            <h2>Panel de Control</h2>
+            <div style="margin-bottom: 20px;">
+                <button id="add-machine" style="background:#ce2f2f; color:white; border:none; padding:10px; cursor:pointer;">+ Agregar Máquina</button>
+            </div>
+            <div id="admin-forms"></div>
+            <button onclick="location.reload()" style="width:100%; padding:15px; background:#ce2f2f; color:white; border:none; margin-top:20px; cursor:pointer;">GUARDAR Y CERRAR</button>
+        </section>
+    </main>
+
+    <footer><p>© 2026 Maquinas de Confección R&K</p></footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

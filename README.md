@@ -1,1 +1,2 @@
-# MaquinasDeConfeccionR-K
+# MaquinasDeConfeccion
+Maquinaria de confección.
